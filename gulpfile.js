@@ -7,7 +7,7 @@ var sass  = require('gulp-sass');
 gulp.task('minifyjs',function(){
 		gulp.src('public/js/*.js')
 			.pipe(uglify())
-			.pipe(gulp.dest('./bulid/js/'));
+			.pipe(gulp.dest('./build/js/'));
 });
 
 gulp.task('sass',function(){
