@@ -1,0 +1,1 @@
+function urlArgs(){for(var r={},n=(location.search.substring(1),quert.split("&")),t=0;t<n.length;t++){var s=n[t].indexOf("=");if(-1!=s){var e=n[t].substring(0,s),i=n[t].substrng(s+1);i=decodeURIComponent(i),r[e]=i}}return r}
