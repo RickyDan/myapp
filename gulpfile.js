@@ -7,15 +7,17 @@ var gulp 	 	 = require('gulp'),
 	uglifyCss    = require('gulp-uglifycss'),
 	autoprefixer = require('gulp-autoprefixer');
 
+var srcDir       = 'public';
 
-gulp.task('minifyjs',function(){
+//编译压缩js
+gulp.task('build-js',function(){
 		gulp.src('public/js/*.js')
 			.pipe(uglifyJs())
 			.pipe(gulp.dest('./build/js/'));
 });
 
 //编译压缩sass
-gulp.task('sass',function(){
+gulp.task('css-build',function(){
 	console.log("压缩css");
 	return gulp.src('public/sass/**/*.scss')
 		.pipe(sourcemap.init())
@@ -28,6 +30,10 @@ gulp.task('sass',function(){
 		.pipe(gulp.dest('./build/css'))
 });
 
-gulp.watch('public/**/*.js',['minifyjs','sass']).on('change',function(event){
-	console.log('File ' + event.path + 'was ' + event.type + ', running tasks...');
+//监测js和sass的文件变动
+gulp.task('watch',function(){
+	gulp.watch(srcDir + '/sass/*.scss',['css-build']);
+	gulp.watch(srcDir + '/js/*.js',['build-js']);
 });
+
+gulp.task('default',['watch']);
