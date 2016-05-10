@@ -27,3 +27,7 @@ gulp.task('sass',function(){
 		.pipe(uglifyCss())
 		.pipe(gulp.dest('./build/css'))
 });
+
+gulp.watch('public/**/*.js',['minifyjs','sass']).on('change',function(event){
+	console.log('File ' + event.path + 'was ' + event.type + ', running tasks...');
+});
