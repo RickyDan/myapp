@@ -24,7 +24,9 @@
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-uglify": "^1.5.3",
     "gulp-uglifycss": "^1.0.6",
-    "mongoose": "^4.4.16"
+    "gulp-watch-path": "^0.1.0",
+    "mongoose": "^4.4.16",
+    "stream-combiner2": "^1.1.1"
   },
   "dependencies": {}
 }

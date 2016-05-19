@@ -9,4 +9,5 @@
 	transform: scale(0.8);
 	@include box-size();
 	background-color: #fff;
+	transition: width 2s;
 }
