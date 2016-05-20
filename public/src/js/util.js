@@ -21,4 +21,4 @@ var mySingle = (function(){
         }
     }
 }());
-console.log('陆遥，我好想你');
+console.log('陆遥 520');

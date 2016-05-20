@@ -8,7 +8,7 @@ app.set('view engine','handlebars');
 
 app.set('port', process.env.PORT || 3000);
 
-/*routers(app);
+routers(app);
 
 //404页面
 app.use(function(req,res){
@@ -22,10 +22,6 @@ app.use(function(err,req,res,next){
 	res.type('text/plain');
 	res.status(500);
 	res.send('500 - Server Error');
-});*/
-
-app.get('/',function(req,res){
-	console.log("Hello 陆遥");
 });
 
 app.listen(app.get('port'),function(){

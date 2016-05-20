@@ -1,1 +1,0 @@
-var mySingle=function(){function n(){var n=function(){console.log("I am a private method")};return{publicMethod:n,publicProperty:"public property"}}var o;return{getInstance:function(){return o?o:o=n()}}}();console.log("陆遥，我好想你");
